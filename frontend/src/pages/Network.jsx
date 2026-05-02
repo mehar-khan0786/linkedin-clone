@@ -5,6 +5,10 @@ import { authDataContext } from "../context/AuthContext";
 import { FaCheckCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
+import {io} from "socket.io-client";
+export let socket=io("https://linkedin-backend-e53y.onrender.com");
+
+
 function Network() {
   let { serverUrl } = useContext(authDataContext);
   let [connections, setConnections] = useState([]);
